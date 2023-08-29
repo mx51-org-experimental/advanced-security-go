@@ -33,6 +33,7 @@ func AllBooks() ([]Book, error) {
 // Query for books by name. This function contains a SQL Injection issue.
 // The user input is not parameterized. Instead of using fmt.Sprintf() to build
 // the query, you should be using a parameterized query.
+/*
 func NameQuery(r string) ([]Book, error) {
 	// Fix: rows, err := DB.Query("SELECT * FROM books WHERE name = ?", r)
 	rows, err := DB.Query(fmt.Sprintf("SELECT * FROM books WHERE name = '%s'", r))
@@ -48,6 +49,7 @@ func NameQuery(r string) ([]Book, error) {
 
 	return bks, nil
 }
+*/
 
 // Query for books by Author. This function contains a SQL Injection issue.
 // The user input is not parameterized. Instead of using fmt.Sprintf() to build
